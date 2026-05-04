@@ -155,6 +155,26 @@
       border: 1px solid rgba(127, 180, 188, 0.2);
     }
 
+    .data-note {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) auto;
+      gap: 16px;
+      align-items: center;
+      margin: 0 0 20px;
+      padding: 18px 20px;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.58), rgba(241, 223, 170, 0.2)),
+        rgba(255, 255, 255, 0.34);
+      border: 1px solid rgba(127, 180, 188, 0.22);
+    }
+
+    .data-note p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
     iframe {
       display: block;
       width: 100%;
@@ -179,6 +199,10 @@
         padding: 18px;
       }
 
+      .data-note {
+        grid-template-columns: 1fr;
+      }
+
       .viewer-frame {
         padding: 10px;
       }
@@ -192,13 +216,20 @@
         <div>
           <p class="eyebrow">Puzzle File</p>
           <h1>Field Reports</h1>
-          <p class="subtitle"></p>
+          <p class="subtitle">Bulletin and dataset for the Field Reports puzzle.</p>
         </div>
         <div class="actions">
           <a class="button secondary" href="index.html">Back to Hub</a>
           <a class="button" href="field_reports_bulletin_pdf.pdf" target="_blank" rel="noopener noreferrer">Open PDF Directly</a>
         </div>
       </div>
+
+      <section class="data-note" aria-label="Field Reports dataset">
+        <p>
+          <code>field_reports.csv</code> is the data file for this puzzle.
+        </p>
+        <a class="button secondary" href="field_reports.csv">Open CSV</a>
+      </section>
 
       <div class="viewer-frame">
         <iframe src="field_reports_bulletin_pdf.pdf" title="Field Reports PDF"></iframe>
